@@ -1,0 +1,30 @@
+body {
+    background-color: black;
+}
+
+* {
+    color: white;
+    font-family: monospace;
+}
+
+.center {
+    text-align: center;
+}
+
+.nav {
+    float: left;
+    padding: 14px 16px;
+    font-size: 17px;
+    background-color: grey;
+    overflow: hidden;
+}
+
+.nav a {
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: white;
+}
+
