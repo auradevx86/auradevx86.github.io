@@ -12,11 +12,11 @@ body {
 }
 
 .nav {
-    float: left;
     padding: 14px 16px;
     font-size: 17px;
-    background-color: purple;
+    background-color: #200040;
     overflow: hidden;
+    white-space: true;
 }
 
 .nav a {
@@ -25,15 +25,14 @@ body {
 }
 
 .nav a:hover {
-    background-color: white;
+    background-color: lightpink;
 }
 
-.welcome, .updates, .socialmeda {
-    background-color: purple;
+.updates, .socialmeda {
+    background-color: #200040;
     width: 500;
     height: 250;
 
-    border: 1px solid white;
     padding: 10px;
-    margin: 10px;
+    margin: 20px;
 }
