@@ -1,0 +1,91 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="main_style.css">
+    <title>auradev - programming</title>
+</head>
+
+<body>
+    <div class="nav">
+        <a href="index.html">home |</a>
+        <a href="programming.html">programming |</a>
+        <a href="drawing.html">drawing |</a>
+        <a href="comingsoon.html">black midi | </a>
+        <a href="tutorials.html">tutorials | </a>
+        <a href="about.html">about | </a>
+    </div>
+    <br>
+    <h1 class="center">Win32 API tutorial</h1>
+    <h2 class="center">part -1: introduction</h2>
+
+    <p>hi! if you're here, i'm assuming that</p>
+    <ul>
+        <li>you want to know how to learn how to program native Windows programs</li>
+        <li>you are/want to use/using windows</li>
+        <li>you want to use C++</li>
+    </ul>
+
+    <h2>so what the hell is the Win32 API even?</h3>
+    <p>the Win32 API is the API that Windows uses to create Windows-specific programs.
+        this is the lowest level of Windows programming that you use.
+        program APIs like Java Swing, wxWidgets and .NET Forms all have calls to the Win32 API!
+        it's just that they handle most of the nitty gritty bits for you, just like higher level programming languages
+        such as Python will have calls to low-level assembly. this is the code that Windows uses directly. this will
+        be what the processor will tell Windows to do. (well, not exactly, because assembly and stuff)
+    </p>
+    <br>
+    <h2>if it's so low level, why should i use it?</h2>
+    <p>
+        <h3><b><i>warning: lots of tl;dr here, if you don't want to read this, that's fine.</i></b></h3><br>
+        we have stuff like wxWidgets, Qt, GTK+, why use the lowest level?
+        <br>
+        usually we use the Win32 API for compatibility, flexibility and preference.
+        <br>
+        lots of the Win32 API have remanents from 16-bit Windows! (i love 16 bit)<br>
+        but you'll realise that most Win32 applications will run much better than Qt and GTK+.
+        <br>
+        but it does give a great deal of flexibility. you can easily decide whether you want compatibility for older versions of Windows,<br>
+        or whether you want the status bar to use this, blah blah blah. <br>
+        for example, i cannot stress how much i hate using .NET Forms status bar control,
+        for the time i usually spend on trying to get correct a .NET Forms status bar correct I could have created it in the Win32 API, mow the lawn,
+        and hoard 10 kilos of HRT pills.
+
+        which comes to our final argument, just preference. i've come to realise i don't like using wrapper classes because they usually
+        do all the work for you, and i've always being intrigued about low level stuff. it's the same reason why some people use assembly instead of Python.
+    </p>
+
+    <h2>the scope of this tutorial</h2>
+    <p>the Win32 API is vast. don't believe me? just go to C:\Program Files (x86)\Windows Kits\ and you'll see everything. that's the Win32 API.</p>
+    <p>it includes driver interactions, console tools, low level drawing, etc but we're going to focus on the GUI part of everything, because that's what Windows is all about, literal windows.</p>
+    <p>microsoft has documented the other functions on the low level stuff pretty well, so i don't think i need to go through this.</p>
+
+    <h2>why did i even create this?</h2>
+    <p>there are so many tutorials on the Win32 API. why did I create my own?</p>
+    <p>trust me, i'm not a professional programmer, i'm a trans girl who instead of playing games in class like the cool kids i spend my class time programming and doodling.<br>
+        but i've realised that a big API like the Win32 API means there are so many variations of how to write programs correctly, and all the info that i've gathered 
+        is very scattered all over the place. <br>i've got bits and bobs from this place, and some others from another. 
+        <br>
+        additionally, a Win32 program is very delicate.<br> it needs specific compiler options in order to work, which vary from compiler to compiler.
+        and these throw errors that are so arcane that it can be very overwhelming.<br> the variations between compilers and different code styles are 
+        so different between each other, it's hard to know what will and won't compile using your options and compiler.
+        <br>i've tried to put in as many variations i could find, and if you have questions, you can hit me up on social media.
+        <h3><b><i>END OF TL;DR</i></b></h3>
+    </p>
+
+    <h2>prexiquites</h2>
+    <p>unfortunately, i have not created a normal C++ tutorial yet, so this tutorial will NOT cover any basic C++ stuff.</p>
+    <p>the things you need to know how to use are: </p>
+    <ul>
+        <li>variables</li>
+        <li>headers</li>
+        <li>strings</li>
+        <li>pointers</li>
+        <li>basic language features (such as if, switch, delete)</li>
+        <li>preprocessor definitions</li>
+    </ul>
+    <p>i'm sorry if i offend if i say this, but this is usually very basic C++ knowledge. if you don't know any C++ or these things, i would recommend you turn back or continue if you like, 
+        you either have complete free will or something or someone is dictating you to do one of these options.</p>
+    <p>i don't expect you to know how to use any specific IDEs i mention, or any compiler options.</p>
+    <p>so, basically i just expect you to know how to write a basic C++ program (or C, most of these tutorials will work on C as well, and will be stated otherwise)</p>
+
+    <h2>alrightly, let's start learning how to make your first program in the Win32 API! </h2>
+    <h2><i>next: setting up your environment</i></h2>
+</body>

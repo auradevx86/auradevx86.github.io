@@ -1,0 +1,74 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="main_style.css">
+    <title>auradev - programming</title>
+</head>
+
+<body>
+    <div class="nav">
+        <a href="index.html">home |</a>
+        <a href="programming.html">programming |</a>
+        <a href="drawing.html">drawing |</a>
+        <a href="comingsoon.html">black midi | </a>
+        <a href="tutorials.html">tutorials | </a>
+        <a href="about.html">about | </a>
+    </div>
+    <br>
+    <h1 class="center">Win32 API tutorial</h1>
+    <h2 class="center">part 0: introduction</h2>
+
+    <p>so, here we are. at this point, you should have confirmed that you want to learn how to use the Win32 API.</p>
+
+    <h2>recommended IDEs</h2>
+    <p>if you are confused on what IDE to use, here are the ones I recommend:
+        <h3><b>Visual Studio Community</b></h3>
+        this is a contraversial one, honestly it's not the best IDE for small scale projects, but I'm using it because of the MSVC++ compiler. 
+            <br>(in fact, i usually just use VSCode and just run it from Visual Studio code tools)
+            <br>this is a good choice for first time Win32 developers as it does set up a lot of the stuff for you, so you can rest assured that your compiler options will work.
+            <b>takeaways: automatic setup, good debugging tools, but the tools are very complex and not very flexible.</b>
+        <h3><b>Visual Studio Code (VSCode)</b></h3>
+        this is a common one. very similar to visual studio, but you have to set up a lot of the stuff you want to use. 
+        <br>less debugging tools, but so much more user-customisable. a lot less lightweight too!
+        <h3><b>Code::Blocks</b></h3>
+        also very lightweight, and it does set up a lot of things for you.
+        <br>however, it is a lot less flexible at Visual Studio Code, and also doesn't support MSVC++ (Microsoft's C++ compiler)
+        <h3><b>Notepad/Notepad++</b></h3>
+        i've grouped these two together because notepad++ is slightly more optimised for coding. 
+        <br>they're both fine to use, but NO debugging tools at all so get used to the command line tools.
+        <h3><b>vim or nano</b></h3>
+        these are both command line editors and they're both good, but like notepad and notepad++, no debugging tools so have fun specifying every compiler option! 
+    </p>
+    <br>
+
+    <h2>testing to see if your compiler works</h2>
+    <p>
+        to make Windows programs, you need to make sure your tools are working!
+        <br>to see if your compiler can compile this, copy and paste this code here and see if it compiles:
+        <div class="code">
+            <p>
+                #include <<Windows.h>><br>
+                <br>
+                int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine, int nCmdShow) {<br>
+                &emsp;&emsp;&emsp;&emsp;return 0;<br>
+                }
+            </p>
+        </div>
+        <br>
+        <p>didn't work? let's find out why!</p>
+        <h3>troubleshooting</h3>
+        if you've gotten to this point this code probably doesn't work.
+        <br>try these steps to get your code to work.
+        <br>
+        <h3><br><b>Error LNK<i>xxxx</i> - undefined reference to WinMain@16 (or something like that)</b></h3>
+        <br>if this happens, it means that it is trying to compile as a console application, and a Win32 GUI application is NOT a console application.
+        <br>so if this happens, try these steps:<br>    
+        <br><b>using MSVC++ (Visual Studio):</b>
+        <br>right click your project, click properties.
+        <br>once on the properties page, on the left hand side, click Linker > SubSystem.
+        <br>change the value to Windows (SUBSYSTEM:WINDOWS) and click Apply or OK.
+        <br>and now tryto see if it compiles.
+        <br><br>
+        
+    </p>
+    <h2>alrightly, let's start learning how to make your first program in the Win32 API! </h2>
+    <h2><i>next: setting up your environment</i></h2>
+</body>
