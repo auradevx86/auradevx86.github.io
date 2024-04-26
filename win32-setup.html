@@ -14,7 +14,7 @@
     </div>
     <br>
     <h1 class="center">Win32 API tutorial</h1>
-    <h2 class="center">part 0: introduction</h2>
+    <h2 class="center">part 0: setting up</h2>
 
     <p>so, here we are. at this point, you should have confirmed that you want to learn how to use the Win32 API.</p>
 
@@ -43,15 +43,31 @@
     <p>
         to make Windows programs, you need to make sure your tools are working!
         <br>to see if your compiler can compile this, copy and paste this code here and see if it compiles:
+        MSVC++/Clang:
         <div class="code">
             <p>
-                #include <<Windows.h>><br>
+                #include &lt;Windows.h&gt;<br>
                 <br>
                 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine, int nCmdShow) {<br>
                 &emsp;&emsp;&emsp;&emsp;return 0;<br>
                 }
             </p>
         </div>
+
+        GCC:
+        <div class="code">
+            <p>
+                #include &lt;Windows.h&gt;<br>
+                <br>
+                int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {<br>
+                &emsp;&emsp;&emsp;&emsp;return 0;<br>
+                }
+            </p>
+        </div>
+
+        <br>
+        i'll explain the differences between these two functions later, and you don't need to know how they work yet. 
+
         <br>
         <p>didn't work? let's find out why!</p>
         <h3>troubleshooting</h3>
@@ -65,10 +81,16 @@
         <br>right click your project, click properties.
         <br>once on the properties page, on the left hand side, click Linker > SubSystem.
         <br>change the value to Windows (SUBSYSTEM:WINDOWS) and click Apply or OK.
-        <br>and now tryto see if it compiles.
+        <br>and now see if it compiles.
         <br><br>
-        
+        <br><b>using GCC:</b>
+        <br>make sure you're using the GCC code instead of the one for other compilers. for some reason GCC doesn't like wWinMain but will accept WinMain.
+        <br><br>
+        <b>generic fix for all compilers:</b>
+        <br>add this preprocessor definitions:
+        <div class="code">
+            <p>#pragma comment(lib, "user32.lib")</p>
+        </div>
     </p>
-    <h2>alrightly, let's start learning how to make your first program in the Win32 API! </h2>
     <h2><i>next: setting up your environment</i></h2>
 </body>
