@@ -1,0 +1,82 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="main_style.css">
+    <title>auradev - programming</title>
+</head>
+
+<body>
+    <div class="nav">
+        <a href="index.html">home |</a>
+        <a href="programming.html">programming |</a>
+        <a href="drawing.html">drawing |</a>
+        <a href="comingsoon.html">black midi | </a>
+        <a href="tutorials.html">tutorials | </a>
+        <a href="about.html">about | </a>
+    </div>
+    <br>
+    <h1 class="center">Win32 API tutorial</h1>
+    <h2 class="center">part 0: setting up</h2>
+
+    <p>in the previous page, one of the parameters in wWinMain:</p>
+    <div class="code">
+        <p>int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, <strong><i>PWSTR</i></strong> pCmdLine, int nShowCmd)</p>
+    </div>
+
+    <p>
+        so what is PWSTR?
+        <br>so Microsoft decided to make things *easier* they added definitions to simply types.
+        <br>literally, PWSTR is defined like this:<br>
+        <div class="code">
+            <p>#define PWSTR wchar_t*</p>
+        </div>
+        <br>usually you can tell what a type is based on this:
+        <ul>
+            <li>P is for pointer. (e.g. PSTR = Pointer to string)</li>
+            <li>LP is for long pointer, however in Win32, LP and P is the same thing. (e.g. LPSTR - Long Pointer to String)</li>
+            <li>STR is for string, however it is a character array/pointer to an array instead C++'s string type. (e.g. PSTR)</li>
+            <li>U stands for unsigned. Usually for unsigned integer. (e.g. UINT)</li>
+            <li>W stands for wide. in this case wide for wide character, which is Unicode (UTF-16 in Windows), e.g. (PWSTR = Pointer to Wide String)</li>
+            <li>C stands for const (e.g. LPCSTR = Long Pointer to Constant String).</li>
+            <li>T is just for Windows to decide whether a string should be Unicode or ANSI. (e.g. LPTSTR = Long Pointer to String that is decided by Windows whether you want diversity or not)</li>
+            <li>H is for handle. (e.g. HINSTANCE = Handle to an instance/module)</li>
+        </ul>
+
+        <br>
+        for example, in this case, PWSTR means Pointer to Wide String.<br>
+        here's a table of common types you usually use of what these native Windows types means if you can't figure them out:<br>
+        <table style="padding: 10px; border: 1px">
+            <tr>
+                <th><b>Windows type</b></th>
+                <th>PSTR</th>
+                <th>LPSTR</th>
+                <th>PCSTR</th>
+                <th>LPCSTR</th>
+                <th>PWSTR</th>
+                <th>LPWSTR</th>
+                <th>PCWSTR</th>
+                <th>LPCWSTR</th>
+                <th>PTSTR</th>
+                <th>LPTSTR</th>
+                <th>PCTSTR</th>
+                <th>LPCTSTR</th>
+            </tr>
+            <tr>
+                <th><b>C++ type</b></th>
+                <th>char*</th>
+                <th>char*</th>
+                <th>const char*</th>
+                <th>const char*</th>
+                <th>wchar_t*</th>
+                <th>wchar_t*</th>
+                <th>const wchar_t*</th>
+                <th>const wchar_t*</th>
+                <th>TCHAR*</th>
+                <th>TCHAR*</th>
+                <th>const TCHAR*</th>
+                <th>const TCHAR*</th>
+            </tr>
+        </table>
+        
+        <!--hello-->
+    </p>
+    <h2><i>next: Windows types</i></h2>
+</body>
